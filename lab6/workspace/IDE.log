@@ -1,0 +1,1998 @@
+21:36:32 DEBUG : Logs will be stored at 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/IDE.log'.
+21:36:38 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Orion\Documents\ece385-master\lab6\workspace_61\temp_xsdb_launch_script.tcl
+21:36:38 INFO  : Registering command handlers for Vitis TCF services
+21:36:38 INFO  : Platform repository initialization has completed.
+21:36:42 INFO  : XSCT server has started successfully.
+21:36:42 INFO  : plnx-install-location is set to ''
+21:36:42 INFO  : Successfully done setting XSCT server connection channel  
+21:36:42 INFO  : Successfully done query RDI_DATADIR 
+21:36:42 INFO  : Successfully done setting workspace for the tool. 
+21:37:10 INFO  : Result from executing command 'getProjects': mb_6_1_top
+21:37:10 INFO  : Result from executing command 'getPlatforms': 
+21:37:11 WARN  : An unexpected exception occurred in the module 'platform project logging'
+21:37:11 INFO  : Platform 'mb_6_1_top' is added to custom repositories.
+21:37:15 INFO  : Platform 'mb_6_1_top' is added to custom repositories.
+21:39:53 INFO  : Result from executing command 'getProjects': mb_6_1_top
+21:39:53 INFO  : Result from executing command 'getPlatforms': mb_6_1_top|C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/mb_6_1_top.xpfm
+21:39:54 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+21:40:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:40:30 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+21:40:30 INFO  : 'jtag frequency' command is executed.
+21:40:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:40:31 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+21:40:31 INFO  : Context for processor 'microblaze_0' is selected.
+21:40:31 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+21:40:31 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:40:31 INFO  : Context for processor 'microblaze_0' is selected.
+21:40:31 INFO  : System reset is completed.
+21:40:35 INFO  : 'after 3000' command is executed.
+21:40:35 INFO  : Context for processor 'microblaze_0' is selected.
+21:40:35 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+21:40:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+21:40:35 INFO  : Context for processor 'microblaze_0' is selected.
+21:40:35 INFO  : 'con' command is executed.
+21:40:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:40:35 INFO  : Disconnected from the channel tcfchan#2.
+21:53:15 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+21:53:59 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+21:56:57 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:01:28 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:02:39 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:02:59 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:04:54 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:05:13 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:07:44 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:07:55 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:08:08 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:10:07 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:10:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:10:22 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+22:10:22 INFO  : 'jtag frequency' command is executed.
+22:10:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:10:24 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+22:10:24 INFO  : Context for processor 'microblaze_0' is selected.
+22:10:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+22:10:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:10:24 INFO  : Context for processor 'microblaze_0' is selected.
+22:10:24 INFO  : System reset is completed.
+22:10:27 INFO  : 'after 3000' command is executed.
+22:10:27 INFO  : Context for processor 'microblaze_0' is selected.
+22:10:27 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+22:10:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+22:10:27 INFO  : Context for processor 'microblaze_0' is selected.
+22:10:27 INFO  : 'con' command is executed.
+22:10:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:10:27 INFO  : Disconnected from the channel tcfchan#3.
+22:11:23 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:12:05 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:12:16 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:13:22 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:14:09 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:14:25 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:14:43 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:15:20 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:15:26 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:17:28 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:17:56 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:18:25 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:18:58 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:19:15 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:20:32 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:20:43 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:20:58 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:22:04 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:22:14 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:22:35 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:23:01 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:23:15 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:23:33 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:24:55 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:25:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:25:07 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+22:25:07 INFO  : 'jtag frequency' command is executed.
+22:25:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:25:09 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+22:25:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:09 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+22:25:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:25:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:09 INFO  : System reset is completed.
+22:25:12 INFO  : 'after 3000' command is executed.
+22:25:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:12 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+22:25:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+22:25:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:12 INFO  : 'con' command is executed.
+22:25:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:25:12 INFO  : Disconnected from the channel tcfchan#4.
+22:25:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:25:30 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+22:25:30 INFO  : 'jtag frequency' command is executed.
+22:25:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:25:32 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+22:25:32 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:32 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+22:25:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:25:32 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:32 INFO  : System reset is completed.
+22:25:35 INFO  : 'after 3000' command is executed.
+22:25:35 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:35 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+22:25:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+22:25:35 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:35 INFO  : 'con' command is executed.
+22:25:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:25:35 INFO  : Disconnected from the channel tcfchan#5.
+22:25:41 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:25:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:25:56 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+22:25:56 INFO  : 'jtag frequency' command is executed.
+22:25:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:25:58 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+22:25:58 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:58 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+22:25:58 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:25:58 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:58 INFO  : System reset is completed.
+22:26:01 INFO  : 'after 3000' command is executed.
+22:26:01 INFO  : Context for processor 'microblaze_0' is selected.
+22:26:01 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+22:26:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+22:26:01 INFO  : Context for processor 'microblaze_0' is selected.
+22:26:01 INFO  : 'con' command is executed.
+22:26:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:26:01 INFO  : Disconnected from the channel tcfchan#6.
+22:27:47 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:27:57 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:28:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:28:06 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+22:28:06 INFO  : 'jtag frequency' command is executed.
+22:28:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:28:07 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+22:28:07 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:07 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+22:28:07 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:28:07 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:07 INFO  : System reset is completed.
+22:28:10 INFO  : 'after 3000' command is executed.
+22:28:11 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:11 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+22:28:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+22:28:11 INFO  : Context for processor 'microblaze_0' is selected.
+22:28:11 INFO  : 'con' command is executed.
+22:28:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:28:11 INFO  : Disconnected from the channel tcfchan#7.
+22:29:50 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:29:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:29:58 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+22:29:58 INFO  : 'jtag frequency' command is executed.
+22:29:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:30:00 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+22:30:00 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:00 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+22:30:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:30:00 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:00 INFO  : System reset is completed.
+22:30:03 INFO  : 'after 3000' command is executed.
+22:30:03 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:03 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+22:30:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+22:30:03 INFO  : Context for processor 'microblaze_0' is selected.
+22:30:03 INFO  : 'con' command is executed.
+22:30:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:30:03 INFO  : Disconnected from the channel tcfchan#8.
+22:30:49 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:30:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:30:59 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+22:30:59 INFO  : 'jtag frequency' command is executed.
+22:30:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:31:01 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+22:31:01 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+22:31:01 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:31:01 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:01 INFO  : System reset is completed.
+22:31:04 INFO  : 'after 3000' command is executed.
+22:31:04 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:04 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+22:31:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+22:31:04 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:04 INFO  : 'con' command is executed.
+22:31:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:31:04 INFO  : Disconnected from the channel tcfchan#9.
+22:31:38 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+22:31:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:31:46 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+22:31:46 INFO  : 'jtag frequency' command is executed.
+22:31:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:31:47 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+22:31:48 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:48 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+22:31:48 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:31:48 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:48 INFO  : System reset is completed.
+22:31:51 INFO  : 'after 3000' command is executed.
+22:31:51 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:51 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+22:31:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+22:31:51 INFO  : Context for processor 'microblaze_0' is selected.
+22:31:51 INFO  : 'con' command is executed.
+22:31:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:31:51 INFO  : Disconnected from the channel tcfchan#10.
+23:44:25 DEBUG : Logs will be stored at 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/IDE.log'.
+23:44:26 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Orion\Documents\ece385-master\lab6\workspace_61\temp_xsdb_launch_script.tcl
+23:44:32 INFO  : XSCT server has started successfully.
+23:44:32 INFO  : Successfully done setting XSCT server connection channel  
+23:44:32 INFO  : plnx-install-location is set to ''
+23:44:32 INFO  : Successfully done setting workspace for the tool. 
+23:44:33 INFO  : Platform repository initialization has completed.
+23:44:34 INFO  : Successfully done query RDI_DATADIR 
+23:44:34 INFO  : Registering command handlers for Vitis TCF services
+00:07:52 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:08:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:08:16 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:08:16 INFO  : 'jtag frequency' command is executed.
+00:08:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:08:17 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:08:17 INFO  : Context for processor 'microblaze_0' is selected.
+00:08:17 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:08:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:08:18 INFO  : Context for processor 'microblaze_0' is selected.
+00:08:18 INFO  : System reset is completed.
+00:08:21 INFO  : 'after 3000' command is executed.
+00:08:21 INFO  : Context for processor 'microblaze_0' is selected.
+00:08:21 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:08:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:08:21 INFO  : Context for processor 'microblaze_0' is selected.
+00:08:21 INFO  : 'con' command is executed.
+00:08:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:08:21 INFO  : Disconnected from the channel tcfchan#1.
+00:08:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:08:31 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:08:31 INFO  : 'jtag frequency' command is executed.
+00:08:34 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:08:34 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:08:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:08:34 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:08:53 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:08:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:08:59 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:08:59 INFO  : 'jtag frequency' command is executed.
+00:09:02 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:09:02 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:09:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:09:02 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:10:38 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:10:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:10:56 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:10:56 INFO  : 'jtag frequency' command is executed.
+00:10:59 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:10:59 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:10:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:10:59 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:11:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:11:42 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:11:42 INFO  : 'jtag frequency' command is executed.
+00:11:45 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:11:45 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:11:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:11:45 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:12:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:12:31 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:12:31 INFO  : 'jtag frequency' command is executed.
+00:12:35 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:12:35 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:12:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:12:35 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:14:19 WARN  : An unexpected exception occurred in the module 'platform project logging'
+00:15:58 INFO  : Result from executing command 'getProjects': mb_6_1_top
+00:15:58 INFO  : Result from executing command 'getPlatforms': 
+00:15:59 WARN  : An unexpected exception occurred in the module 'platform project logging'
+00:16:05 INFO  : Platform 'mb_6_1_top' is added to custom repositories.
+00:16:14 INFO  : Platform 'mb_6_1_top' is added to custom repositories.
+00:17:21 INFO  : Hardware specification for platform project 'mb_6_1_top' is updated.
+00:18:10 INFO  : Result from executing command 'getProjects': mb_6_1_top
+00:18:10 INFO  : Result from executing command 'getPlatforms': mb_6_1_top|C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/mb_6_1_top.xpfm
+00:18:10 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:18:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:18:48 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:18:48 INFO  : 'jtag frequency' command is executed.
+00:18:51 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:18:51 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:18:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:18:51 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:20:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:20:20 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:20:20 INFO  : 'jtag frequency' command is executed.
+00:20:23 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:20:23 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:20:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:20:23 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:22:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:22:18 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:22:18 INFO  : 'jtag frequency' command is executed.
+00:22:21 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:22:21 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:22:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:22:21 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:22:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:22:39 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:22:39 INFO  : 'jtag frequency' command is executed.
+00:22:42 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:22:42 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:22:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:22:42 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:23:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:23:07 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:23:07 INFO  : 'jtag frequency' command is executed.
+00:23:10 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:23:10 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:23:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:23:10 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:23:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:23:29 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:23:29 INFO  : 'jtag frequency' command is executed.
+00:23:32 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:23:32 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:23:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:23:32 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:23:36 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:23:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:23:41 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:23:41 INFO  : 'jtag frequency' command is executed.
+00:23:44 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:23:44 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:23:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:23:44 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+00:25:47 DEBUG : Logs will be stored at 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/IDE.log'.
+00:25:48 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Orion\Documents\ece385-master\lab6\workspace_61\temp_xsdb_launch_script.tcl
+00:25:52 INFO  : XSCT server has started successfully.
+00:25:52 INFO  : Successfully done setting XSCT server connection channel  
+00:25:52 INFO  : plnx-install-location is set to ''
+00:25:52 INFO  : Successfully done setting workspace for the tool. 
+00:25:55 INFO  : Platform repository initialization has completed.
+00:25:55 INFO  : Successfully done query RDI_DATADIR 
+00:25:56 INFO  : Registering command handlers for Vitis TCF services
+00:26:10 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:26:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:26:20 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:26:20 INFO  : 'jtag frequency' command is executed.
+00:26:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:26:22 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:26:22 INFO  : Context for processor 'microblaze_0' is selected.
+00:26:22 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:26:22 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:26:22 INFO  : Context for processor 'microblaze_0' is selected.
+00:26:22 INFO  : System reset is completed.
+00:26:25 INFO  : 'after 3000' command is executed.
+00:26:25 INFO  : Context for processor 'microblaze_0' is selected.
+00:26:25 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:26:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:26:25 INFO  : Context for processor 'microblaze_0' is selected.
+00:26:25 INFO  : 'con' command is executed.
+00:26:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:26:25 INFO  : Disconnected from the channel tcfchan#1.
+00:27:52 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:28:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:28:00 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:28:00 INFO  : 'jtag frequency' command is executed.
+00:28:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:28:01 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:28:02 INFO  : Context for processor 'microblaze_0' is selected.
+00:28:02 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:28:02 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:28:02 INFO  : Context for processor 'microblaze_0' is selected.
+00:28:02 INFO  : System reset is completed.
+00:28:05 INFO  : 'after 3000' command is executed.
+00:28:05 INFO  : Context for processor 'microblaze_0' is selected.
+00:28:05 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:28:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:28:05 INFO  : Context for processor 'microblaze_0' is selected.
+00:28:05 INFO  : 'con' command is executed.
+00:28:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:28:05 INFO  : Disconnected from the channel tcfchan#2.
+00:29:25 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:29:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:29:31 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:29:31 INFO  : 'jtag frequency' command is executed.
+00:29:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:29:32 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:29:32 INFO  : Context for processor 'microblaze_0' is selected.
+00:29:32 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:29:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:29:32 INFO  : Context for processor 'microblaze_0' is selected.
+00:29:32 INFO  : System reset is completed.
+00:29:35 INFO  : 'after 3000' command is executed.
+00:29:36 INFO  : Context for processor 'microblaze_0' is selected.
+00:29:36 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:29:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:29:36 INFO  : Context for processor 'microblaze_0' is selected.
+00:29:36 INFO  : 'con' command is executed.
+00:29:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:29:36 INFO  : Disconnected from the channel tcfchan#3.
+00:29:59 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:30:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:30:07 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:30:07 INFO  : 'jtag frequency' command is executed.
+00:30:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:30:08 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:30:08 INFO  : Context for processor 'microblaze_0' is selected.
+00:30:08 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:30:08 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:30:08 INFO  : Context for processor 'microblaze_0' is selected.
+00:30:08 INFO  : System reset is completed.
+00:30:11 INFO  : 'after 3000' command is executed.
+00:30:11 INFO  : Context for processor 'microblaze_0' is selected.
+00:30:12 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:30:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:30:12 INFO  : Context for processor 'microblaze_0' is selected.
+00:30:12 INFO  : 'con' command is executed.
+00:30:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:30:12 INFO  : Disconnected from the channel tcfchan#4.
+00:32:51 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:32:58 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:33:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:33:08 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:33:08 INFO  : 'jtag frequency' command is executed.
+00:33:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:33:09 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:33:09 INFO  : Context for processor 'microblaze_0' is selected.
+00:33:09 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:33:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:33:09 INFO  : Context for processor 'microblaze_0' is selected.
+00:33:09 INFO  : System reset is completed.
+00:33:12 INFO  : 'after 3000' command is executed.
+00:33:12 INFO  : Context for processor 'microblaze_0' is selected.
+00:33:13 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:33:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:33:13 INFO  : Context for processor 'microblaze_0' is selected.
+00:33:13 INFO  : 'con' command is executed.
+00:33:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:33:13 INFO  : Disconnected from the channel tcfchan#5.
+00:33:29 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:33:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:33:38 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:33:38 INFO  : 'jtag frequency' command is executed.
+00:33:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:33:39 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:33:39 INFO  : Context for processor 'microblaze_0' is selected.
+00:33:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:33:39 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:33:39 INFO  : Context for processor 'microblaze_0' is selected.
+00:33:39 INFO  : System reset is completed.
+00:33:43 INFO  : 'after 3000' command is executed.
+00:33:43 INFO  : Context for processor 'microblaze_0' is selected.
+00:33:43 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:33:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:33:43 INFO  : Context for processor 'microblaze_0' is selected.
+00:33:43 INFO  : 'con' command is executed.
+00:33:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:33:43 INFO  : Disconnected from the channel tcfchan#6.
+00:34:19 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:34:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:34:26 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:34:26 INFO  : 'jtag frequency' command is executed.
+00:34:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:34:27 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:34:28 INFO  : Context for processor 'microblaze_0' is selected.
+00:34:28 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:34:28 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:34:28 INFO  : Context for processor 'microblaze_0' is selected.
+00:34:28 INFO  : System reset is completed.
+00:34:31 INFO  : 'after 3000' command is executed.
+00:34:31 INFO  : Context for processor 'microblaze_0' is selected.
+00:34:31 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:34:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:34:31 INFO  : Context for processor 'microblaze_0' is selected.
+00:34:31 INFO  : 'con' command is executed.
+00:34:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:34:31 INFO  : Disconnected from the channel tcfchan#7.
+00:35:23 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:35:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:35:32 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:35:32 INFO  : 'jtag frequency' command is executed.
+00:35:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:35:34 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:35:34 INFO  : Context for processor 'microblaze_0' is selected.
+00:35:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:35:34 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:35:34 INFO  : Context for processor 'microblaze_0' is selected.
+00:35:34 INFO  : System reset is completed.
+00:35:37 INFO  : 'after 3000' command is executed.
+00:35:37 INFO  : Context for processor 'microblaze_0' is selected.
+00:35:37 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:35:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:35:37 INFO  : Context for processor 'microblaze_0' is selected.
+00:35:37 INFO  : 'con' command is executed.
+00:35:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:35:37 INFO  : Disconnected from the channel tcfchan#8.
+00:37:09 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:37:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:37:16 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:37:16 INFO  : 'jtag frequency' command is executed.
+00:37:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:37:17 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:37:17 INFO  : Context for processor 'microblaze_0' is selected.
+00:37:17 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:37:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:37:17 INFO  : Context for processor 'microblaze_0' is selected.
+00:37:17 INFO  : System reset is completed.
+00:37:20 INFO  : 'after 3000' command is executed.
+00:37:21 INFO  : Context for processor 'microblaze_0' is selected.
+00:37:21 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:37:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:37:21 INFO  : Context for processor 'microblaze_0' is selected.
+00:37:21 INFO  : 'con' command is executed.
+00:37:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:37:21 INFO  : Disconnected from the channel tcfchan#9.
+00:40:45 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:40:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:40:50 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:40:51 INFO  : 'jtag frequency' command is executed.
+00:40:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:40:52 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:40:52 INFO  : Context for processor 'microblaze_0' is selected.
+00:40:52 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:40:52 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:40:52 INFO  : Context for processor 'microblaze_0' is selected.
+00:40:52 INFO  : System reset is completed.
+00:40:55 INFO  : 'after 3000' command is executed.
+00:40:55 INFO  : Context for processor 'microblaze_0' is selected.
+00:40:55 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:40:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:40:55 INFO  : Context for processor 'microblaze_0' is selected.
+00:40:55 INFO  : 'con' command is executed.
+00:40:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:40:55 INFO  : Disconnected from the channel tcfchan#10.
+00:42:51 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:42:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:42:58 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:42:58 INFO  : 'jtag frequency' command is executed.
+00:42:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:42:59 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:42:59 INFO  : Context for processor 'microblaze_0' is selected.
+00:42:59 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:42:59 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:42:59 INFO  : Context for processor 'microblaze_0' is selected.
+00:42:59 INFO  : System reset is completed.
+00:43:02 INFO  : 'after 3000' command is executed.
+00:43:02 INFO  : Context for processor 'microblaze_0' is selected.
+00:43:02 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:43:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:43:02 INFO  : Context for processor 'microblaze_0' is selected.
+00:43:02 INFO  : 'con' command is executed.
+00:43:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:43:02 INFO  : Disconnected from the channel tcfchan#11.
+00:44:48 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:44:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:44:59 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:44:59 INFO  : 'jtag frequency' command is executed.
+00:44:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:45:00 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:45:00 INFO  : Context for processor 'microblaze_0' is selected.
+00:45:00 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:45:00 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:45:00 INFO  : Context for processor 'microblaze_0' is selected.
+00:45:00 INFO  : System reset is completed.
+00:45:03 INFO  : 'after 3000' command is executed.
+00:45:03 INFO  : Context for processor 'microblaze_0' is selected.
+00:45:03 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:45:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:45:03 INFO  : Context for processor 'microblaze_0' is selected.
+00:45:03 INFO  : 'con' command is executed.
+00:45:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:45:04 INFO  : Disconnected from the channel tcfchan#12.
+00:46:16 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:46:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:46:22 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:46:22 INFO  : 'jtag frequency' command is executed.
+00:46:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:46:24 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:46:24 INFO  : Context for processor 'microblaze_0' is selected.
+00:46:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:46:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:46:24 INFO  : Context for processor 'microblaze_0' is selected.
+00:46:24 INFO  : System reset is completed.
+00:46:27 INFO  : 'after 3000' command is executed.
+00:46:27 INFO  : Context for processor 'microblaze_0' is selected.
+00:46:27 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:46:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:46:27 INFO  : Context for processor 'microblaze_0' is selected.
+00:46:27 INFO  : 'con' command is executed.
+00:46:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:46:27 INFO  : Disconnected from the channel tcfchan#13.
+00:47:06 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:47:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:47:13 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:47:13 INFO  : 'jtag frequency' command is executed.
+00:47:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:47:14 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:47:14 INFO  : Context for processor 'microblaze_0' is selected.
+00:47:14 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:47:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:47:14 INFO  : Context for processor 'microblaze_0' is selected.
+00:47:14 INFO  : System reset is completed.
+00:47:18 INFO  : 'after 3000' command is executed.
+00:47:18 INFO  : Context for processor 'microblaze_0' is selected.
+00:47:18 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:47:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:47:18 INFO  : Context for processor 'microblaze_0' is selected.
+00:47:18 INFO  : 'con' command is executed.
+00:47:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:47:18 INFO  : Disconnected from the channel tcfchan#14.
+00:48:08 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:48:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:48:55 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:48:55 INFO  : 'jtag frequency' command is executed.
+00:48:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:48:57 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:48:57 INFO  : Context for processor 'microblaze_0' is selected.
+00:48:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:48:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:48:57 INFO  : Context for processor 'microblaze_0' is selected.
+00:48:57 INFO  : System reset is completed.
+00:49:00 INFO  : 'after 3000' command is executed.
+00:49:00 INFO  : Context for processor 'microblaze_0' is selected.
+00:49:00 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:49:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:49:00 INFO  : Context for processor 'microblaze_0' is selected.
+00:49:00 INFO  : 'con' command is executed.
+00:49:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:49:00 INFO  : Disconnected from the channel tcfchan#15.
+00:50:10 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:51:37 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+00:51:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:51:51 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+00:51:51 INFO  : 'jtag frequency' command is executed.
+00:51:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+00:51:52 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+00:51:52 INFO  : Context for processor 'microblaze_0' is selected.
+00:51:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+00:51:53 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+00:51:53 INFO  : Context for processor 'microblaze_0' is selected.
+00:51:53 INFO  : System reset is completed.
+00:51:56 INFO  : 'after 3000' command is executed.
+00:51:56 INFO  : Context for processor 'microblaze_0' is selected.
+00:51:56 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+00:51:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+00:51:56 INFO  : Context for processor 'microblaze_0' is selected.
+00:51:56 INFO  : 'con' command is executed.
+00:51:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+00:51:56 INFO  : Disconnected from the channel tcfchan#16.
+01:10:21 DEBUG : Logs will be stored at 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/IDE.log'.
+01:10:22 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Orion\Documents\ece385-master\lab6\workspace_61\temp_xsdb_launch_script.tcl
+01:10:28 INFO  : XSCT server has started successfully.
+01:10:28 INFO  : plnx-install-location is set to ''
+01:10:28 INFO  : Successfully done setting XSCT server connection channel  
+01:10:28 INFO  : Successfully done setting workspace for the tool. 
+01:10:30 INFO  : Platform repository initialization has completed.
+01:10:30 INFO  : Registering command handlers for Vitis TCF services
+01:10:31 INFO  : Successfully done query RDI_DATADIR 
+01:11:14 INFO  : Hardware specification for platform project 'mb_6_1_top' is updated.
+01:11:38 INFO  : Result from executing command 'getProjects': mb_6_1_top
+01:11:38 INFO  : Result from executing command 'getPlatforms': mb_6_1_top|C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/mb_6_1_top.xpfm
+01:11:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:11:46 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+01:11:46 INFO  : 'jtag frequency' command is executed.
+01:11:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+01:11:48 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+01:11:48 INFO  : Context for processor 'microblaze_0' is selected.
+01:11:48 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+01:11:48 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:11:48 INFO  : Context for processor 'microblaze_0' is selected.
+01:11:48 INFO  : System reset is completed.
+01:11:51 INFO  : 'after 3000' command is executed.
+01:11:51 INFO  : Context for processor 'microblaze_0' is selected.
+01:11:51 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+01:11:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+01:11:51 INFO  : Context for processor 'microblaze_0' is selected.
+01:11:51 INFO  : 'con' command is executed.
+01:11:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+01:11:52 INFO  : Disconnected from the channel tcfchan#2.
+01:12:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:12:08 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+01:12:08 INFO  : 'jtag frequency' command is executed.
+01:12:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+01:12:09 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+01:12:09 INFO  : Context for processor 'microblaze_0' is selected.
+01:12:09 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+01:12:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:12:09 INFO  : Context for processor 'microblaze_0' is selected.
+01:12:10 INFO  : System reset is completed.
+01:12:13 INFO  : 'after 3000' command is executed.
+01:12:13 INFO  : Context for processor 'microblaze_0' is selected.
+01:12:13 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+01:12:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+01:12:13 INFO  : Context for processor 'microblaze_0' is selected.
+01:12:13 INFO  : 'con' command is executed.
+01:12:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+01:12:13 INFO  : Disconnected from the channel tcfchan#3.
+01:12:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:12:55 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+01:12:55 INFO  : 'jtag frequency' command is executed.
+01:12:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+01:12:56 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+01:12:56 INFO  : Context for processor 'microblaze_0' is selected.
+01:12:56 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+01:12:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+01:12:57 INFO  : Context for processor 'microblaze_0' is selected.
+01:12:57 INFO  : System reset is completed.
+01:13:00 INFO  : 'after 3000' command is executed.
+01:13:00 INFO  : Context for processor 'microblaze_0' is selected.
+01:13:00 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+01:13:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+01:13:00 INFO  : Context for processor 'microblaze_0' is selected.
+01:13:00 INFO  : 'con' command is executed.
+01:13:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+01:13:00 INFO  : Disconnected from the channel tcfchan#4.
+01:25:09 INFO  : Result from executing command 'getProjects': mb_6_1_top
+01:25:09 INFO  : Result from executing command 'getPlatforms': mb_6_1_top|C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/mb_6_1_top.xpfm
+01:25:10 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+01:25:23 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+01:25:58 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:17:20 DEBUG : Logs will be stored at 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/IDE.log'.
+02:17:22 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Orion\Documents\ece385-master\lab6\workspace_61\temp_xsdb_launch_script.tcl
+02:17:27 INFO  : XSCT server has started successfully.
+02:17:27 INFO  : plnx-install-location is set to ''
+02:17:27 INFO  : Successfully done setting XSCT server connection channel  
+02:17:27 INFO  : Successfully done setting workspace for the tool. 
+02:17:30 INFO  : Platform repository initialization has completed.
+02:17:31 INFO  : Successfully done query RDI_DATADIR 
+02:17:31 INFO  : Registering command handlers for Vitis TCF services
+02:17:51 INFO  : Hardware specification for platform project 'mb_6_1_top' is updated.
+02:18:22 INFO  : Result from executing command 'getProjects': mb_6_1_top
+02:18:22 INFO  : Result from executing command 'getPlatforms': mb_6_1_top|C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/mb_6_1_top.xpfm
+02:18:23 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:18:28 INFO  : The hardware specification used by project 'mb_6_1' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+02:18:28 INFO  : The file 'C:\Users\Orion\Documents\ece385-master\lab6\workspace_61\mb_6_1\_ide\bitstream\mb_6_1_top.bit' stored in project is removed.
+02:18:28 INFO  : The file 'C:\Users\Orion\Documents\ece385-master\lab6\workspace_61\mb_6_1\_ide\bitstream\mb_6_1_top.mmi' stored in project is removed.
+02:18:28 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\Orion\Documents\ece385-master\lab6\workspace_61\mb_6_1\_ide\bitstream' in project 'mb_6_1'.
+02:18:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:18:47 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+02:18:47 INFO  : 'jtag frequency' command is executed.
+02:18:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+02:18:48 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+02:18:48 INFO  : Context for processor 'microblaze_0' is selected.
+02:18:48 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+02:18:48 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:18:48 INFO  : Context for processor 'microblaze_0' is selected.
+02:18:48 INFO  : System reset is completed.
+02:18:51 INFO  : 'after 3000' command is executed.
+02:18:52 INFO  : Context for processor 'microblaze_0' is selected.
+02:18:52 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+02:18:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+02:18:52 INFO  : Context for processor 'microblaze_0' is selected.
+02:18:52 INFO  : 'con' command is executed.
+02:18:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+02:18:52 INFO  : Disconnected from the channel tcfchan#2.
+02:24:23 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:24:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:24:32 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+02:24:32 INFO  : 'jtag frequency' command is executed.
+02:24:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+02:24:34 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+02:24:34 INFO  : Context for processor 'microblaze_0' is selected.
+02:24:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+02:24:34 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:24:34 INFO  : Context for processor 'microblaze_0' is selected.
+02:24:34 INFO  : System reset is completed.
+02:24:37 INFO  : 'after 3000' command is executed.
+02:24:37 INFO  : Context for processor 'microblaze_0' is selected.
+02:24:37 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+02:24:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+02:24:37 INFO  : Context for processor 'microblaze_0' is selected.
+02:24:37 INFO  : 'con' command is executed.
+02:24:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+02:24:37 INFO  : Disconnected from the channel tcfchan#3.
+02:27:10 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:27:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:27:18 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+02:27:18 INFO  : 'jtag frequency' command is executed.
+02:27:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+02:27:20 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+02:27:20 INFO  : Context for processor 'microblaze_0' is selected.
+02:27:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+02:27:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:27:20 INFO  : Context for processor 'microblaze_0' is selected.
+02:27:20 INFO  : System reset is completed.
+02:27:23 INFO  : 'after 3000' command is executed.
+02:27:23 INFO  : Context for processor 'microblaze_0' is selected.
+02:27:23 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+02:27:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+02:27:23 INFO  : Context for processor 'microblaze_0' is selected.
+02:27:23 INFO  : 'con' command is executed.
+02:27:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+02:27:23 INFO  : Disconnected from the channel tcfchan#4.
+02:30:14 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:30:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:30:23 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+02:30:23 INFO  : 'jtag frequency' command is executed.
+02:30:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+02:30:25 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+02:30:25 INFO  : Context for processor 'microblaze_0' is selected.
+02:30:25 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+02:30:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:30:25 INFO  : Context for processor 'microblaze_0' is selected.
+02:30:25 INFO  : System reset is completed.
+02:30:28 INFO  : 'after 3000' command is executed.
+02:30:28 INFO  : Context for processor 'microblaze_0' is selected.
+02:30:28 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+02:30:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+02:30:28 INFO  : Context for processor 'microblaze_0' is selected.
+02:30:28 INFO  : 'con' command is executed.
+02:30:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+02:30:28 INFO  : Disconnected from the channel tcfchan#5.
+02:31:16 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:31:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:31:25 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+02:31:25 INFO  : 'jtag frequency' command is executed.
+02:31:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+02:31:27 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+02:31:27 INFO  : Context for processor 'microblaze_0' is selected.
+02:31:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+02:31:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:31:27 INFO  : Context for processor 'microblaze_0' is selected.
+02:31:27 INFO  : System reset is completed.
+02:31:30 INFO  : 'after 3000' command is executed.
+02:31:30 INFO  : Context for processor 'microblaze_0' is selected.
+02:31:30 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+02:31:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+02:31:30 INFO  : Context for processor 'microblaze_0' is selected.
+02:31:30 INFO  : 'con' command is executed.
+02:31:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+02:31:30 INFO  : Disconnected from the channel tcfchan#6.
+02:33:37 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:33:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:33:45 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+02:33:45 INFO  : 'jtag frequency' command is executed.
+02:33:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+02:33:47 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+02:33:47 INFO  : Context for processor 'microblaze_0' is selected.
+02:33:47 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+02:33:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:33:47 INFO  : Context for processor 'microblaze_0' is selected.
+02:33:47 INFO  : System reset is completed.
+02:33:50 INFO  : 'after 3000' command is executed.
+02:33:50 INFO  : Context for processor 'microblaze_0' is selected.
+02:33:50 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+02:33:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+02:33:50 INFO  : Context for processor 'microblaze_0' is selected.
+02:33:50 INFO  : 'con' command is executed.
+02:33:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+02:33:50 INFO  : Disconnected from the channel tcfchan#7.
+02:34:46 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:34:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:34:52 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+02:34:52 INFO  : 'jtag frequency' command is executed.
+02:34:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+02:34:54 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+02:34:54 INFO  : Context for processor 'microblaze_0' is selected.
+02:34:54 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+02:34:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:34:54 INFO  : Context for processor 'microblaze_0' is selected.
+02:34:54 INFO  : System reset is completed.
+02:34:57 INFO  : 'after 3000' command is executed.
+02:34:57 INFO  : Context for processor 'microblaze_0' is selected.
+02:34:57 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+02:34:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+02:34:57 INFO  : Context for processor 'microblaze_0' is selected.
+02:34:57 INFO  : 'con' command is executed.
+02:34:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+02:34:57 INFO  : Disconnected from the channel tcfchan#8.
+02:37:06 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:37:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:37:15 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+02:37:15 INFO  : 'jtag frequency' command is executed.
+02:37:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+02:37:17 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+02:37:17 INFO  : Context for processor 'microblaze_0' is selected.
+02:37:17 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+02:37:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:37:17 INFO  : Context for processor 'microblaze_0' is selected.
+02:37:17 INFO  : System reset is completed.
+02:37:20 INFO  : 'after 3000' command is executed.
+02:37:20 INFO  : Context for processor 'microblaze_0' is selected.
+02:37:20 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+02:37:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+02:37:20 INFO  : Context for processor 'microblaze_0' is selected.
+02:37:20 INFO  : 'con' command is executed.
+02:37:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+02:37:20 INFO  : Disconnected from the channel tcfchan#9.
+02:39:13 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:39:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:39:21 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+02:39:22 INFO  : 'jtag frequency' command is executed.
+02:39:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+02:39:23 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+02:39:23 INFO  : Context for processor 'microblaze_0' is selected.
+02:39:23 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+02:39:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:39:23 INFO  : Context for processor 'microblaze_0' is selected.
+02:39:23 INFO  : System reset is completed.
+02:39:26 INFO  : 'after 3000' command is executed.
+02:39:26 INFO  : Context for processor 'microblaze_0' is selected.
+02:39:26 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+02:39:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+02:39:26 INFO  : Context for processor 'microblaze_0' is selected.
+02:39:26 INFO  : 'con' command is executed.
+02:39:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+02:39:26 INFO  : Disconnected from the channel tcfchan#10.
+02:39:58 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+02:40:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:40:07 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+02:40:07 INFO  : 'jtag frequency' command is executed.
+02:40:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+02:40:09 INFO  : Device configured successfully with "C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+02:40:09 INFO  : Context for processor 'microblaze_0' is selected.
+02:40:09 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+02:40:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+02:40:09 INFO  : Context for processor 'microblaze_0' is selected.
+02:40:09 INFO  : System reset is completed.
+02:40:12 INFO  : 'after 3000' command is executed.
+02:40:12 INFO  : Context for processor 'microblaze_0' is selected.
+02:40:12 INFO  : The application 'C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+02:40:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/ece385-master/lab6/workspace_61/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+02:40:12 INFO  : Context for processor 'microblaze_0' is selected.
+02:40:12 INFO  : 'con' command is executed.
+02:40:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+02:40:12 INFO  : Disconnected from the channel tcfchan#11.
+01:11:40 DEBUG : Logs will be stored at 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/IDE.log'.
+01:11:42 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Orion\Documents\GitHub\ece385\lab6\workspace\temp_xsdb_launch_script.tcl
+01:12:01 INFO  : XSCT server has started successfully.
+01:12:01 INFO  : Successfully done setting XSCT server connection channel  
+01:12:01 INFO  : plnx-install-location is set to ''
+01:12:01 INFO  : Successfully done setting workspace for the tool. 
+01:12:05 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+01:12:05 INFO  : Platform repository initialization has completed.
+01:12:05 INFO  : Registering command handlers for Vitis TCF services
+01:12:07 INFO  : Successfully done query RDI_DATADIR 
+01:12:48 INFO  : Result from executing command 'getProjects': mb_6_1_top
+01:12:48 INFO  : Result from executing command 'getPlatforms': 
+01:12:49 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+13:09:52 DEBUG : Logs will be stored at 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/IDE.log'.
+13:09:54 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Orion\Documents\GitHub\ece385\lab6\workspace\temp_xsdb_launch_script.tcl
+13:09:56 INFO  : Platform repository initialization has completed.
+13:09:58 INFO  : XSCT server has started successfully.
+13:09:58 INFO  : plnx-install-location is set to ''
+13:09:58 INFO  : Successfully done setting XSCT server connection channel  
+13:09:58 INFO  : Successfully done setting workspace for the tool. 
+13:10:00 INFO  : Registering command handlers for Vitis TCF services
+13:10:00 INFO  : Successfully done query RDI_DATADIR 
+13:11:35 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+13:21:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:21:22 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+13:21:22 INFO  : 'jtag frequency' command is executed.
+13:21:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+13:21:24 INFO  : Device configured successfully with "C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+13:21:24 INFO  : Context for processor 'microblaze_0' is selected.
+13:21:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+13:21:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:21:24 INFO  : Context for processor 'microblaze_0' is selected.
+13:21:24 INFO  : System reset is completed.
+13:21:27 INFO  : 'after 3000' command is executed.
+13:21:27 INFO  : Context for processor 'microblaze_0' is selected.
+13:21:27 INFO  : The application 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+13:21:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+13:21:27 INFO  : Context for processor 'microblaze_0' is selected.
+13:21:28 INFO  : 'con' command is executed.
+13:21:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:21:28 INFO  : Disconnected from the channel tcfchan#1.
+13:24:24 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+13:24:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:24:32 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+13:24:32 INFO  : 'jtag frequency' command is executed.
+13:24:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+13:24:34 INFO  : Device configured successfully with "C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+13:24:34 INFO  : Context for processor 'microblaze_0' is selected.
+13:24:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+13:24:34 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:24:34 INFO  : Context for processor 'microblaze_0' is selected.
+13:24:34 INFO  : System reset is completed.
+13:24:37 INFO  : 'after 3000' command is executed.
+13:24:37 INFO  : Context for processor 'microblaze_0' is selected.
+13:24:37 INFO  : The application 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+13:24:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+13:24:37 INFO  : Context for processor 'microblaze_0' is selected.
+13:24:37 INFO  : 'con' command is executed.
+13:24:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:24:37 INFO  : Disconnected from the channel tcfchan#2.
+13:25:00 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+13:25:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:25:09 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+13:25:09 INFO  : 'jtag frequency' command is executed.
+13:25:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+13:25:11 INFO  : Device configured successfully with "C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+13:25:11 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:11 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+13:25:11 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:25:11 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:11 INFO  : System reset is completed.
+13:25:14 INFO  : 'after 3000' command is executed.
+13:25:14 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:14 INFO  : The application 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+13:25:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+13:25:14 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:14 INFO  : 'con' command is executed.
+13:25:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:25:14 INFO  : Disconnected from the channel tcfchan#3.
+13:25:27 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+13:25:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:25:45 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+13:25:45 INFO  : 'jtag frequency' command is executed.
+13:25:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+13:25:46 INFO  : Device configured successfully with "C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+13:25:46 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:46 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+13:25:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:25:46 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:47 INFO  : System reset is completed.
+13:25:50 INFO  : 'after 3000' command is executed.
+13:25:50 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:50 INFO  : The application 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+13:25:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+13:25:50 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:50 INFO  : 'con' command is executed.
+13:25:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:25:50 INFO  : Disconnected from the channel tcfchan#4.
+13:26:05 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+13:26:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:26:15 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+13:26:15 INFO  : 'jtag frequency' command is executed.
+13:26:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+13:26:16 INFO  : Device configured successfully with "C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+13:26:16 INFO  : Context for processor 'microblaze_0' is selected.
+13:26:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+13:26:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:26:16 INFO  : Context for processor 'microblaze_0' is selected.
+13:26:16 INFO  : System reset is completed.
+13:26:20 INFO  : 'after 3000' command is executed.
+13:26:20 INFO  : Context for processor 'microblaze_0' is selected.
+13:26:20 INFO  : The application 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+13:26:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+13:26:20 INFO  : Context for processor 'microblaze_0' is selected.
+13:26:20 INFO  : 'con' command is executed.
+13:26:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:26:20 INFO  : Disconnected from the channel tcfchan#5.
+13:32:19 INFO  : Checking for BSP changes to sync application flags for project 'mb_6_1'...
+13:32:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:32:37 INFO  : Jtag cable 'RealDigital Boo 88710000000AA' is selected.
+13:32:37 INFO  : 'jtag frequency' command is executed.
+13:32:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+13:32:39 INFO  : Device configured successfully with "C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit"
+13:32:39 INFO  : Context for processor 'microblaze_0' is selected.
+13:32:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa'.
+13:32:39 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:32:39 INFO  : Context for processor 'microblaze_0' is selected.
+13:32:39 INFO  : System reset is completed.
+13:32:42 INFO  : 'after 3000' command is executed.
+13:32:42 INFO  : Context for processor 'microblaze_0' is selected.
+13:32:42 INFO  : The application 'C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf' is downloaded to processor 'microblaze_0'.
+13:32:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 88710000000AA" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/_ide/bitstream/mb_6_1_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1_top/export/mb_6_1_top/hw/mb_6_1_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Orion/Documents/GitHub/ece385/lab6/workspace/mb_6_1/Debug/mb_6_1.elf
+----------------End of Script----------------
+
+13:32:42 INFO  : Context for processor 'microblaze_0' is selected.
+13:32:42 INFO  : 'con' command is executed.
+13:32:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:32:42 INFO  : Disconnected from the channel tcfchan#6.

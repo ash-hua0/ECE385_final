@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Oct 28 15:19:34 2024
+# Process ID: 4880
+# Current directory: C:/Users/Orion/Documents/GitHub/ece385/lab6
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9648 C:\Users\Orion\Documents\GitHub\ece385\lab6\lab6.xpr
+# Log file: C:/Users/Orion/Documents/GitHub/ece385/lab6/vivado.log
+# Journal file: C:/Users/Orion/Documents/GitHub/ece385/lab6\vivado.jou
+# Running On: DESKTOP-SK26SJD, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 12, Host memory: 16473 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Orion/Documents/GitHub/ece385/lab6/lab6.xpr
+update_compile_order -fileset sources_1
+save_project_as lab_7 C:/Users/Orion/Documents/GitHub/ece385/lab_7 -force
+import_files
+export_ip_user_files -of_objects  [get_files C:/Users/Orion/Documents/GitHub/ece385/lab_7/lab_7.srcs/sources_1/new/HexDriver.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Orion/Documents/GitHub/ece385/lab_7/lab_7.srcs/sources_1/new/HexDriver.sv
+export_ip_user_files -of_objects  [get_files C:/Users/Orion/Documents/GitHub/ece385/lab_7/lab_7.srcs/sources_1/new/Synchronizers.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/Orion/Documents/GitHub/ece385/lab_7/lab_7.srcs/sources_1/new/Synchronizers.sv
+add_files -norecurse {C:/Users/Orion/Documents/GitHub/ece385/lab_7/lab_7_1_provided_fa24/font_rom.sv C:/Users/Orion/Documents/GitHub/ece385/lab_7/lab_7_1_provided_fa24/hdmi_text_controller_v1_0_tb.sv C:/Users/Orion/Documents/GitHub/ece385/lab_7/lab_7_1_provided_fa24/hdmi_text_controller_v1_0_AXI.sv C:/Users/Orion/Documents/GitHub/ece385/lab_7/lab_7_1_provided_fa24/VGA_controller.sv C:/Users/Orion/Documents/GitHub/ece385/lab_7/lab_7_1_provided_fa24/mb_usb_hdmi_top.sv C:/Users/Orion/Documents/GitHub/ece385/lab_7/lab_7_1_provided_fa24/hdmi_text_controller_v1_0.sv}
