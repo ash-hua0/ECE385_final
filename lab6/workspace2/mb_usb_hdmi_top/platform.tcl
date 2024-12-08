@@ -36,3 +36,23 @@ platform config -updatehw {C:/Users/Orion/Documents/GitHub/ece385/lab6/mb_usb_hd
 platform generate -domains 
 platform config -updatehw {C:/Users/Orion/Documents/GitHub/ece385/lab6/mb_usb_hdmi_top.xsa}
 platform generate -domains 
+platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform generate -domains 
+platform active {mb_usb_hdmi_top}
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform clean
+platform generate -domains standalone_microblaze_0 
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate

@@ -23,6 +23,27 @@ set_property PACKAGE_PIN V13 [get_ports gpio_usb_rst_tri_o]
 set_property PACKAGE_PIN T12 [get_ports usb_spi_ss]
 set_property IOSTANDARD LVCMOS33 [get_ports usb_spi_ss]
 
+# On-board Slide Switches
+set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS25} [get_ports {sw[0]}]
+set_property -dict {PACKAGE_PIN F2 IOSTANDARD LVCMOS25} [get_ports {sw[1]}]
+set_property -dict {PACKAGE_PIN F1 IOSTANDARD LVCMOS25} [get_ports {sw[2]}]
+set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS25} [get_ports {sw[3]}]
+set_property -dict {PACKAGE_PIN E1 IOSTANDARD LVCMOS25} [get_ports {sw[4]}]
+set_property -dict {PACKAGE_PIN D2 IOSTANDARD LVCMOS25} [get_ports {sw[5]}]
+set_property -dict {PACKAGE_PIN D1 IOSTANDARD LVCMOS25} [get_ports {sw[6]}]
+set_property -dict {PACKAGE_PIN C2 IOSTANDARD LVCMOS25} [get_ports {sw[7]}]
+set_property -dict {PACKAGE_PIN B2 IOSTANDARD LVCMOS25} [get_ports {sw[8]}]
+set_property -dict {PACKAGE_PIN A4 IOSTANDARD LVCMOS25} [get_ports {sw[9]}]
+set_property -dict {PACKAGE_PIN A5 IOSTANDARD LVCMOS25} [get_ports {sw[10]}]
+set_property -dict {PACKAGE_PIN A6 IOSTANDARD LVCMOS25} [get_ports {sw[11]}]
+set_property -dict {PACKAGE_PIN C7 IOSTANDARD LVCMOS25} [get_ports {sw[12]}]
+set_property -dict {PACKAGE_PIN A7 IOSTANDARD LVCMOS25} [get_ports {sw[13]}]
+set_property -dict {PACKAGE_PIN B7 IOSTANDARD LVCMOS25} [get_ports {sw[14]}]
+set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS25} [get_ports {sw[15]}]
+
+# PWM audio out signals
+set_property -dict {PACKAGE_PIN B13 IOSTANDARD LVCMOS33} [get_ports {sound}]
+set_property -dict {PACKAGE_PIN B14 IOSTANDARD LVCMOS33} [get_ports {sound}]
 
 set_property IOSTANDARD LVCMOS25 [get_ports {hex_gridA[3]}]
 set_property IOSTANDARD LVCMOS25 [get_ports {hex_gridA[2]}]

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="C:\Users\Orion\Documents\GitHub\ece385\lab6\workspace2\mb_usb_hdmi_top\export\mb_usb_hdmi_top"/>
+	<item key="sdx.custom.platform.repository.locations" value="C:\Users\Orion\Documents\GitHub\ECE385_final\lab6\workspace2\mb_usb_hdmi_top;C:\Users\Orion\Documents\GitHub\ECE385_final\lab6\workspace2\mb_usb_hdmi_top\microblaze_0\standalone_microblaze_0\bsp\microblaze_0;C:\Users\Orion\Documents\GitHub\ECE385_final\lab6\workspace2\mb_usb_hdmi_top\export\mb_usb_hdmi_top"/>
 </section>

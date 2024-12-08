@@ -27,11 +27,14 @@ module mb_usb_hdmi_top(
     input logic uart_rtl_0_rxd,
     output logic uart_rtl_0_txd,
     
-    //HDMI
-    output logic hdmi_tmds_clk_n,
-    output logic hdmi_tmds_clk_p,
-    output logic [2:0]hdmi_tmds_data_n,
-    output logic [2:0]hdmi_tmds_data_p,
+    //Audio
+    output logic sound,
+    
+//    //HDMI
+//    output logic hdmi_tmds_clk_n,
+//    output logic hdmi_tmds_clk_p,
+//    output logic [2:0]hdmi_tmds_data_n,
+//    output logic [2:0]hdmi_tmds_data_p,
         
     //HEX displays
     output logic [7:0] hex_segA,
@@ -39,19 +42,32 @@ module mb_usb_hdmi_top(
     output logic [7:0] hex_segB,
     output logic [3:0] hex_gridB
 );
-    
+    parameter SAMPLE_COUNT = 2082; // clk/counter=sample rate 48 kHz
     logic [31:0] keycode0_gpio, keycode1_gpio;
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
     logic locked;
-    logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig;
-
-    logic hsync, vsync, vde;
-    logic [3:0] red, green, blue;
+//    logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig;
+//    logic hsync, vsync, vde;
+//    logic [3:0] red, green, blue;
     logic reset_ah;
-    
     assign reset_ah = reset_rtl_0;
-    
-    
+    logic [7:0] tone; 
+    logic [7:0] vol_out;
+    logic [15:0] sample_count;
+    logic trigger; // for sample
+    assign trigger = (sample_count == SAMPLE_COUNT);
+   
+    always_ff @(posedge Clk)begin
+        if (sample_count == SAMPLE_COUNT)
+        begin
+            sample_count <= 16'b0;
+        end 
+        else 
+        begin
+            sample_count <= sample_count + 16'b1;
+        end
+    end
+
     //Keycode HEX drivers
     hex_driver HexA (
         .clk(Clk),
@@ -83,6 +99,19 @@ module mb_usb_hdmi_top(
         .usb_spi_sclk(usb_spi_sclk),
         .usb_spi_ss(usb_spi_ss)
     );
+    
+    //tone generation
+    tonegen tonegen( .clk(Clk),
+                    .rst(reset_ah),
+                    .trigger(trigger),
+                    .key0(keycode0_gpio[7:0]),
+                    .key1(keycode0_gpio[15:8]),
+                    .data_out(tone));   
+                                                                                            
+    volume volume (.signal_in(tone), .signal_out(vol_out));
+    
+    pwm (.clk(Clk), .rst(reset_ah), .level_in({~vol_out[7],vol_out[6:0]}), .pwm_out(pwm_val));
+    assign sound = pwm_val?1'bZ:1'b0;  // tristate; if pwm, hi-imp. if !pwm, aud_pmw=0
         
     //clock wizard configured with a 1x and 5x clock for HDMI
     clk_wiz_0 clk_wiz (
@@ -94,66 +123,66 @@ module mb_usb_hdmi_top(
     );
     
     //VGA Sync signal generator
-    vga_controller vga (
-        .pixel_clk(clk_25MHz),
-        .reset(reset_ah),
-        .hs(hsync),
-        .vs(vsync),
-        .active_nblank(vde),
-        .drawX(drawX),
-        .drawY(drawY)
-    );    
+//    vga_controller vga (
+//        .pixel_clk(clk_25MHz),
+//        .reset(reset_ah),
+//        .hs(hsync),
+//        .vs(vsync),
+//        .active_nblank(vde),
+//        .drawX(drawX),
+//        .drawY(drawY)
+//    );    
 
-    //Real Digital VGA to HDMI converter
-    hdmi_tx_0 vga_to_hdmi (
-        //Clocking and Reset
-        .pix_clk(clk_25MHz),
-        .pix_clkx5(clk_125MHz),
-        .pix_clk_locked(locked),
-        //Reset is active LOW
-        .rst(reset_ah),
-        //Color and Sync Signals
-        .red(red),
-        .green(green),
-        .blue(blue),
-        .hsync(hsync),
-        .vsync(vsync),
-        .vde(vde),
+//    //Real Digital VGA to HDMI converter
+//    hdmi_tx_0 vga_to_hdmi (
+//        //Clocking and Reset
+//        .pix_clk(clk_25MHz),
+//        .pix_clkx5(clk_125MHz),
+//        .pix_clk_locked(locked),
+//        //Reset is active LOW
+//        .rst(reset_ah),
+//        //Color and Sync Signals
+//        .red(red),
+//        .green(green),
+//        .blue(blue),
+//        .hsync(hsync),
+//        .vsync(vsync),
+//        .vde(vde),
         
-        //aux Data (unused)
-        .aux0_din(4'b0),
-        .aux1_din(4'b0),
-        .aux2_din(4'b0),
-        .ade(1'b0),
+//        //aux Data (unused)
+//        .aux0_din(4'b0),
+//        .aux1_din(4'b0),
+//        .aux2_din(4'b0),
+//        .ade(1'b0),
         
-        //Differential outputs
-        .TMDS_CLK_P(hdmi_tmds_clk_p),          
-        .TMDS_CLK_N(hdmi_tmds_clk_n),          
-        .TMDS_DATA_P(hdmi_tmds_data_p),         
-        .TMDS_DATA_N(hdmi_tmds_data_n)          
-    );
+//        //Differential outputs
+//        .TMDS_CLK_P(hdmi_tmds_clk_p),          
+//        .TMDS_CLK_N(hdmi_tmds_clk_n),          
+//        .TMDS_DATA_P(hdmi_tmds_data_p),         
+//        .TMDS_DATA_N(hdmi_tmds_data_n)          
+//    );
 
     
-    //Ball Module
-    ball ball_instance(
-        .Reset(reset_ah),
-        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
-        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
-        .BallX(ballxsig),
-        .BallY(ballysig),
-        .BallS(ballsizesig)
-    );
+//    //Ball Module
+//    ball ball_instance(
+//        .Reset(reset_ah),
+//        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
+//        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
+//        .BallX(ballxsig),
+//        .BallY(ballysig),
+//        .BallS(ballsizesig)
+//    );
     
-    //Color Mapper Module   
-    color_mapper color_instance(
-        .BallX(ballxsig),
-        .BallY(ballysig),
-        .DrawX(drawX),
-        .DrawY(drawY),
-        .Ball_size(ballsizesig),
-        .Red(red),
-        .Green(green),
-        .Blue(blue)
-    );
+//    //Color Mapper Module   
+//    color_mapper color_instance(
+//        .BallX(ballxsig),
+//        .BallY(ballysig),
+//        .DrawX(drawX),
+//        .DrawY(drawY),
+//        .Ball_size(ballsizesig),
+//        .Red(red),
+//        .Green(green),
+//        .Blue(blue)
+//    );
     
 endmodule
