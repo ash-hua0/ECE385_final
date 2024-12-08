@@ -115,8 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {Synth 8-87}  -new_severity {ERROR} 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
@@ -125,9 +124,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 3
-  set_param synth.incrementalSynthesisCache C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/.Xil/Vivado-22532-DESKTOP-SK26SJD/incrSyn
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s50csga324-1
   set_property design_mode GateLvl [current_fileset]

@@ -1,3 +1,5 @@
+// work to create wavetable in instruments.ipynb
+// .wav recording of violin by me :3
 module violin_lut(input[6:0] phase, input clk, output logic[7:0] amp_out);
   always_ff @(posedge clk)begin
     case(phase)

@@ -1,6 +1,7 @@
 module guitar_lut(input[6:0] phase, input clk, output logic[7:0] amp_out);
   always_ff @(posedge clk)begin
     case(phase)
+    //THIS ONE IS BAD AND SOUNDS WRONG
         7'd 0 : amp_out<=8'd 127 ;
         7'd 1 : amp_out<=8'd 133 ;
         7'd 2 : amp_out<=8'd 144 ;
