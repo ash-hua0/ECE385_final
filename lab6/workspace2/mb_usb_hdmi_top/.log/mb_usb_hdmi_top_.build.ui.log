@@ -1,6 +1,6 @@
-2024-12-07T23:54:17.350115100255-23:54:17 **** Build of project mb_usb_hdmi_top ****
-000-buildplatform.bat 62613 mb_usb_hdmi_top  
-000-XSDB Server Channel: tcfchan#4
+2024-12-08T17:07:56.015570400255-17:07:56 **** Build of project mb_usb_hdmi_top ****
+000-buildplatform.bat 50021 mb_usb_hdmi_top  
+000-XSDB Server Channel: tcfchan#11
 000-C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 000-Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 000-make --no-print-directory seq_libs
@@ -77,11 +77,11 @@
 000-
 000-"Running Make libs in microblaze_0/libsrc/intc_v3_15/src"
 000-
-000-"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
-000-
 000-make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
 000-FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMP
 000-ILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
 000-
 000-make -C microblaze_0/libsrc/spi_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_FL
 000-AGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPIL
@@ -145,5 +145,5 @@
 000-'Finished building libraries'
 000-
 00255-
-23:54:30 Build Finished (took 13s.197ms)
+17:08:10 Build Finished (took 14s.924ms)
 
