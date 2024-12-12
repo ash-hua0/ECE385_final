@@ -1,0 +1,4 @@
+Running: xsim.dir/soundtest_behav/xsimk.exe -simmode gui -wdb soundtest_behav.wdb -simrunnum 0 -socket 56575
+Design successfully loaded
+Design Loading Memory Usage: 10924 KB (Peak: 10924 KB)
+Design Loading CPU Usage: 0 ms

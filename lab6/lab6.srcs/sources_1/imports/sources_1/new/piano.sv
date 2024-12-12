@@ -1,4 +1,4 @@
-// (255/2)*sawtooth(x/10)+(255/2)
+
 module piano_lut(input[6:0] phase, input clk, output logic[7:0] amp_out);
   always_ff @(posedge clk)begin
     case(phase)

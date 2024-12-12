@@ -14,7 +14,7 @@
 module mb_usb_hdmi_top(
     input logic Clk,
     input logic reset_rtl_0,
-    
+    input logic [15:0] sw,
     //USB signals
     input logic [0:0] gpio_usb_int_tri_i,
     output logic gpio_usb_rst_tri_o,
@@ -86,6 +86,7 @@ module mb_usb_hdmi_top(
     audio_top audio(
         .clk(Clk),
         .rst(reset_ah),
+        .sw(sw),
         .keycode(keycode0_gpio),
         .aud_out(sound)
     );

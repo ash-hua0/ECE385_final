@@ -1,7 +1,6 @@
-17:07:56 **** Build of project mb_usb_hdmi_top ****
-buildplatform.bat 50021 mb_usb_hdmi_top  
-XSDB Server Channel: tcfchan#11
-C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
+01:11:13 **** Build of project mb_usb_hdmi_top ****
+buildplatform.bat 56751 mb_usb_hdmi_top  
+XSDB Server Channel: tcfchan#4
 Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 make --no-print-directory seq_libs
 
@@ -35,11 +34,11 @@ OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loo
 
 "Running Make include in microblaze_0/libsrc/spi_v4_9/src"
 
+"Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
+
 make -C microblaze_0/libsrc/spi_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
 _FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COM
 PILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
 
 make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
 OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EX
@@ -59,11 +58,11 @@ A_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-
 
 "Running Make libs in microblaze_0/libsrc/bram_v4_8/src"
 
+"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
+
 make -C microblaze_0/libsrc/bram_v4_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
 LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
 LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
 
 make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
 LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
@@ -145,5 +144,5 @@ mb-ar: creating microblaze_0/lib/libxil.a
 'Finished building libraries'
 
 
-17:08:10 Build Finished (took 14s.924ms)
+01:11:28 Build Finished (took 14s.746ms)
 

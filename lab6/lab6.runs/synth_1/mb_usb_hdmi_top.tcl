@@ -70,8 +70,13 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.statsThreshold 360
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 3
-set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache C:/Users/Orion/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-28768-DESKTOP-SK26SJD/incrSyn
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Synth 8-87}  -new_severity {ERROR} 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
@@ -94,6 +99,7 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/lab6.srcs/sources_1/imports/sources_1/imports/Downloads/audio_top.sv
   C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/lab6_2_provided/design_source/hex_driver.sv
+  C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/lab6.srcs/sources_1/new/negedge_detect.sv
   C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/lab6.srcs/sources_1/imports/sources_1/new/piano.sv
   C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/lab6.srcs/sources_1/imports/sources_1/new/pwm.sv
   C:/Users/Orion/Documents/GitHub/ECE385_final/lab6/lab6.srcs/sources_1/imports/sources_1/new/tonegen.sv

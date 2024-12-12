@@ -1,4 +1,3 @@
-//6 bit lookup, 8 bit out
 // (255/2)*sin(x/10)+(255/2), amp is 255/2 because you have 8b output
 module sine_lut(input[6:0] phase, input clk, output logic[7:0] amp_out);
   always_ff @(posedge clk)begin

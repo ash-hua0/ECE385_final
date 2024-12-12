@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../385-final.srcs/sources_1/imports/Downloads/audio_top.sv" \
+"../../../../385-final.srcs/sources_1/new/pwm.sv" \
+"../../../../385-final.srcs/sources_1/new/tonegen.sv" \
+"../../../../385-final.srcs/sources_1/new/volume.sv" \
+"../../../../385-final.srcs/sources_1/new/wavegen.sv" \
+"../../../../385-final.srcs/sources_1/new/wavetable.sv" \
+"../../../../385-final.srcs/sim_1/new/audio_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
